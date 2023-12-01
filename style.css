@@ -30,3 +30,26 @@ header {
     padding: 2px;
 
 }
+.nav ul {
+    margin: 20px;
+    display: flex;
+}
+
+.nav ul li {
+    list-style: none;
+
+}
+
+.nav ul li a {
+    color: white;
+    font-weight: 400px;
+    text-decoration: none;
+    margin: 16px;
+    cursor: pointer;
+
+}
+
+.nav ul li a:hover {
+    color:#ff661f;
+
+}
