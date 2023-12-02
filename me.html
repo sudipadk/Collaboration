@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: monospace;
+           
+        }
+
+        body{
+            background-color: #36C9C6;
+           
+        }
+
+        .card {
+            padding: 4em;
+            margin: 8em;
+            margin-left: 30rem;
+            line-height: 4rem;
+            width:  500px;
+            height: 400px;
+            background-color: #ffffff8f ;
+            border: 3px dashed white ;
+            border-radius: 24px;
+            display: flex;
+            flex-direction:column;
+            align-items: center;
+            
+}
+
+p{
+    font-weight: bolder;
+    font-size: 2rem;
+    margin: 0.5rem;
+    text-align: center;
+}
+
+ button{
+    margin: 8px;
+    padding: 8px;
+    width: 9rem;
+    background-image: linear-gradient(0.65turn, #36C9C6, #ffffff8f);
+    border-radius: 4px;
+    font-weight: bold;
+    border: none;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+} 
+
+button:hover, button:focus, button:active{
+    color: black;
+    font-weight: bolder;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.407);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    cursor:grab;
+
+}
+
+
+        
+    </style>
+</head>
+<body>
+<div class="card">
+    <p>Apple 🍎</p>
+    <p>Mango 🥭</p>
+    <p>Orange 🍊</p>
+    <p>Grapes 🍇</p>
+
+    <button id="Check">Check</button>
+</div>
+</body>
+<script>
+    
+        const fruits = [
+            { name: 'Apple', color: 'red' },
+            { name: 'Mango', color: '#FFBC1F' },
+            { name: 'Orange', color: '#EC7505' },
+            { name: 'Grapes', color: 'purple' }
+        ];
+
+        const btn = document.getElementById('Check');
+        const listEl = document.querySelectorAll('p');
+
+        let fruitNum = 0;
+
+        btn.addEventListener('click', function () {
+            if (fruitNum < fruits.length) {
+                listEl[fruitNum].style.color = fruits[fruitNum].color;
+                fruitNum++;
+            } else {
+                
+        // fruits ko list ko sabai elemnt sakechi feri back to black
+                fruitNum = 0;
+                listEl.forEach(function(p) {
+                p.style.color = 'black'; 
+});
+            }
+        });
+  
+</script>
+</html>
