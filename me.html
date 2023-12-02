@@ -6,6 +6,41 @@
     <title>Document</title>
 </head>
 <body>
-    
+
+    <p>Apple</p>
+    <p>Mango</p>
+    <p>Orange</p>
+    <p>Grapes</p>
+
+    <button id="Check">Check</button>
 </body>
+<script>
+    
+        const fruits = [
+            { name: 'Apple', color: 'red' },
+            { name: 'Mango', color: 'yellow' },
+            { name: 'Orange', color: 'orange' },
+            { name: 'Grapes', color: 'purple' }
+        ];
+
+        const btn = document.getElementById('Check');
+        const listEl = document.querySelectorAll('p');
+
+        let fruitNum = 0;
+
+        btn.addEventListener('click', function () {
+            if (fruitNum < fruits.length) {
+                listEl[fruitNum].style.color = fruits[fruitNum].color;
+                fruitNum++;
+            } else {
+                
+        // fruits ko list ko sabai elemnt sakechi feri back to black
+                fruitNum = 0;
+                listEl.forEach(function(p) {
+                p.style.color = 'black'; 
+});
+            }
+        });
+  
+</script>
 </html>
