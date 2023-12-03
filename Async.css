@@ -17,4 +17,26 @@
         justify-content: space-between;
     }
 
-   
+    button {
+        margin-top: 100px;
+        padding: 4px;
+        font-size: 14px;
+        width: 88px;
+        height: 32px;
+        border-radius: 8px;
+    }
+
+    button:hover {
+        background-color: #ff661f;
+        color: #fcfbfb;
+        cursor: pointer;
+        border: #fcfbfb;
+        overflow: hidden;
+    }
+
+
+    button:active {
+        background-color: #ff661f;
+        color: #fcfbfb;
+        cursor: pointer;
+    }
