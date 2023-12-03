@@ -19,3 +19,9 @@ function startFn(){
         document.body.style.backgroundColor=randomColor ;
     }, 1000);
 }
+
+function endFn(){
+    setTimeout(() => {
+        clearInterval(Interval);    
+    }, 100);   
+}
