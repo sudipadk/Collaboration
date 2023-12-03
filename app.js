@@ -12,3 +12,13 @@ const getColor= () =>{
 }
 
     changeColor.addEventListener('click', getColor);
+
+    function callFn(){ 
+        const Interval = setInterval(function(){
+            console.log('Hello');
+        },1000);
+    
+        setTimeout(()=>{
+            clearInterval(Interval);
+        },3000);
+    }
