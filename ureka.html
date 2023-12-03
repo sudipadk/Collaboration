@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    
+    <style>
+     .box {
+      display: inline-block;
+      width: 100px;
+      height: 50px;
+      margin: 10px;
+      border: 1px solid black;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size:20px;
+      text-align: center;
+      line-height: 50px;
+      cursor: pointer;
+    }
+
+    .output{
+        color:rgb(27, 26, 26);
+        font-family: sans-serif;
+        font-size: 20px;
+        margin:10px;
+    }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="box" id="box1">BOX A</div>
+    <div class="box" id="box2">BOX B</div>
+    <div class="box" id="box3">BOX C</div>
+
+    <p class="output" id="output">output:</p>
+
+    
+    function displayText(event){
+
+        const output = document.getElementById('output');
+        output.innerText='output: '+event.target.innerText
+    }
+   
+    const box1 = document.getElementById('box1');
+    box1.addEventListener('click', displayText);
+
+    const box2 = document.getElementById('box2');
+    box2.addEventListener('click', displayText);
+
+    const box3 = document.getElementById('box3');
+    box3.addEventListener('click', displayText);
+    
+    </script>
+
+</body>
+</html>
